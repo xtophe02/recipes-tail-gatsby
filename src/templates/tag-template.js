@@ -2,6 +2,7 @@ import { graphql } from "gatsby"
 import React from "react"
 import Layout from "../components/Layout"
 import RecipesList from "../components/RecipesList"
+import Seo from "../components/SEO"
 
 export default function TagPage({
   data: {
@@ -11,7 +12,7 @@ export default function TagPage({
 }) {
   return (
     <Layout>
-      <SEO title={pageContext.tag} />
+      <Seo title={tag} />
       <section>
         <h2 className="capitalize">{tag}</h2>
         <RecipesList recipes={recipes} />
