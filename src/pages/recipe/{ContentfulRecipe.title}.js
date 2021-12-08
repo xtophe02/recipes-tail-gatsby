@@ -3,12 +3,12 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import React from "react"
 import Layout from "../../components/Layout"
 import { BsClockHistory, BsClock, BsPeople } from "react-icons/bs"
-import SEO from "../../components/SEO"
+import Seo from "../../components/SEO"
 
 export default function RecipePage({ data: { contentfulRecipe: recipe } }) {
   return (
     <Layout>
-      <SEO title={recipe.title} description={recipe.description.description} />
+      <Seo title={recipe.title} description={recipe.description.description} />
       <section>
         <div className="grid grid-cols-1 space-y-4 md:space-y-0 md:grid-cols-2 md:space-x-12">
           <GatsbyImage
@@ -46,7 +46,7 @@ export default function RecipePage({ data: { contentfulRecipe: recipe } }) {
                   className="px-2 mx-2 font-light text-white capitalize transition bg-indigo-500 rounded hover:bg-indigo-900"
                 >
                   {" "}
-                  <Link to={`/tag/${tag}`}>{tag}</Link>
+                  <Link to={`/tags/${tag}`}>{tag}</Link>
                 </span>
               ))}
             </div>
