@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-ubuntu;
+  }
+  h1 {
+    @apply mb-6 text-3xl font-bold text-indigo-500 md:mb-10 md:text-5xl;
+  }
+  h2 {
+    @apply mb-4 text-xl font-bold text-indigo-500 md:text-3xl md:mb-6;
+  }
+  h3 {
+    @apply mb-2 text-lg font-bold text-indigo-500 md:text-2xl;
+  }
+  p {
+    @apply my-2 md:text-lg;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-8 py-3 m-2 text-white bg-indigo-500 rounded-md;
+  }
+}
